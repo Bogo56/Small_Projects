@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href = "main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h2 class="greeting">Good Afternoon</h2>
+        <img src="media/logo.png" id="logo">
+        <div class="login">
+            <form>
+                <input id = "username" placeholder="user" type="text" max="2" required>
+                <input id = "PIN" placeholder="PIN" type="number" min="4">
+                <button class="log_button">→</button>
+            </form>
+        </div>
+    </div>
+    <section class="content">
+        <div class="labels">
+            <div class="label1">
+                <h2 >Current balance</h3>
+                <p> As of 12/3/2021, 1:26 PM</p>
+            </div>
+            <h2 id="balance" style="font-size: 3rem;">$ 11,720.00</h2>
+        </div>
+        <div class="main-content"> 
+            <div class="history">
+
+            </div>
+            <div class= "operations">
+                <div class = "wrapper">
+                    <div class="transfer">
+                        <h3>Transfer Money</h3>
+                        <form>
+                            <input id="transfer-to">
+                            <input id="transfer-amount">
+                            <button class="send_button transfer">→</button>
+                        </form>
+                        <div class="sublabels" >
+                            <label>Transfer to</label>
+                            <label>Amount</label>
+                        </div>
+                    </div>
+                    <div class="loan">
+                        <h3>Request Loan</h3>
+                        <form>
+                            <input id="loan-amount">
+                            <button class="send_button loan">→</button>
+                        </form>
+                        <div class="sublabels" >
+                            <label>Amount</label>
+                        </div>
+                    </div>
+                    <div class="close">
+                        <h3>Close Account</h3>
+                        <form>
+                            <input id="confirm-user">
+                            <input id="confirm-PIN">
+                            <button class="send_button close">→</button>
+                        </form>
+                        <div class="sublabels" >
+                            <label>Confirm user</label>
+                            <label>Confirm PIN</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class = "summary-info">
+            <div class="statistics">
+                <div class="numbers">
+                    <p>in</p>
+                    <p class ="sum green">$16,900.00</p>
+                    <p>out</p>
+                    <p class ="sum red">$5,180.00</p>
+                    <p>interest</p>
+                    <p class ="sum green">253.50</p>
+                </div>
+                <button class="sort">↓ SORT</button>
+            </div>
+            <div class="counter">
+                <p>You will be logged out in <strong><span>02:15</span></strong></p>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
