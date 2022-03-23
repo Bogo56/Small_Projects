@@ -1,0 +1,26 @@
+<!DOCTYPE "html">
+<html lang="en">
+    <title>Hot News of Today</title>
+    <head>
+        <link rel="stylesheet" href="../static/style.css">
+    </head>
+    <body>
+        <h1>Trending News Mailbot</h1>
+            <p>Stay informed with the most important news of the day in any topic/s that you like. Subscribe to our intelligent mailbot, and you'll get high quality, UpToDate news tailored to your interests. You can enter up to three keywords that you're interested in (at least 1). Our Algoritm will register your preferences and start sending you the 10 most trending news for the day on those topics. </p>
+            <form action="{{url_for('sign_up')}}" method="POST" >
+                <label>E-mail</label><br>
+                <input type="email" name="email"  required><br>
+                <label>Name</label><br>
+                <input type="text" name="name"  required><br>
+                <label>Family Name</label><br>
+                <input type="text" name="fname"  required><br>
+                <label>Topic 1</label><br>
+                <input type="text" name="topic1"  required><br>
+                <label>Topic 2</label><br>
+                <input type="text" name="topic2"><br>
+                <label>Topic 3</label><br>
+                <input type="text" name="topic3"><br>
+                <button type="submit">Signup</button>
+            </form>
+    </body>
+</html>

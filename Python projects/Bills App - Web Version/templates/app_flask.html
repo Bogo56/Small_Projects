@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static_original',filename= 'main.css') }}">
+    <title>Flatmate App</title>
+</head>
+<body>
+    <form action="{{url_for('bill_amount')}}" method="post">
+        <div class="firstdiv">
+            <label for="amount">Bill Amount: </label>
+            <input type="number" id="amount" name="amount" required><br><br>
+            <label for="period">Bill Period: </label>
+            <input type="month"  id="period" name="period" required>
+        </div><br><br>
+        <div class="seconddiv">
+            <h2>First Flatmate</h2>
+            <label for="name">Name: </label>
+            <input id="name" name="name1"required><br><br>
+            <label for="days">Days spent: </label>
+            <input id="days" name="days1" required>
+        </div><br><br>
+        <div class="thirddiv">
+            <h2>Second Flatmate</h2>
+            <label for="name">Name: </label>
+            <input id="name" name="name2"required><br><br>
+            <label for="days">Days spent: </label>
+            <input id="days" name="days2" required>
+        </div><br><br>
+        <div class="button">
+            <button type="submit">Calculate</button>
+        </div>
+    </form>
+</body>
+</html>

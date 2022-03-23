@@ -1,0 +1,11 @@
+Title: Figure Painter
+Description: An app that takes parameters from user inputs and uses them to draw a rectangle or square on a blank
+canvas. The parameters the user gets to choose are the position, the dimensions, the color and the type of the figure
+to draw. Also the user can choose the background color of the canvas. The output is stored in a image file.
+Objects: Shape:
+            x, y, color
+
+         Canvas:
+            background_color
+
+

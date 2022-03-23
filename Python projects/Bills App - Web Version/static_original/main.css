@@ -1,0 +1,114 @@
+
+body{
+     background-color: rgba(94, 189, 145, 0.952);
+     padding:20px;
+     margin-left:600px; 
+     margin-top:110px;   
+}
+
+
+button{
+     width: 200px;
+     height: 40px;
+     margin-top:50px;
+     margin-left:40px;
+     background-color: darkorange;
+     font-size: large;
+     
+}
+
+form{
+     width:280px;
+}
+
+form label{
+     display: inline-block;
+     text-align: right;
+     float: left;
+}
+
+form input{
+     display: inline-block;
+     text-align: left;
+     float: right;
+     width:140px;
+}
+
+
+
+.bills {
+        margin-left:-60px;
+        margin-top: 35px;
+        
+}
+
+table{
+     border: solid 3px rgb(200, 112, 4);
+     padding: 10px;
+     border-style: groove;
+}
+
+
+th,tr{
+     text-align: left;
+     padding-right: 45px;
+     padding-bottom: 25px;
+     font-size: large;
+}
+td{
+     border-top: solid 1px black;
+     padding-bottom: 15px;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     font-size: medium;
+     font-style: normal;
+}
+
+.res{
+     margin-left:-550px;
+     margin-bottom: 20px;
+     text-align: center;
+     
+}
+
+h3{
+     margin-left: -550px;
+     text-align: center;
+     font-style:oblique;
+
+}
+
+.download{
+     margin-left: 25px;
+}
+
+.links a{
+     background-color: red;
+     box-shadow: 0 5px 0 darkred;
+     color: white;
+     padding: 1em 1.5em;
+     position: relative;
+     text-decoration: none;
+     text-transform: uppercase;
+     text-align: center;
+}
+
+.links{
+     margin-top:60px;
+     margin-left:290px;
+}
+
+.home{
+     margin-right:350px;
+     margin-left:-180px;
+}
+
+.home h1{
+     text-align: center;
+}
+
+.home p{
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     font-size: 15pt;
+     border: solid 2px darkred;
+     padding:25px;
+}

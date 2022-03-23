@@ -1,0 +1,33 @@
+<MainScreen>:
+    GridLayout:
+        cols:1
+        GridLayout:
+            cols:1
+            padding:15,15
+            spacing:10,10
+            RelativeLayout:
+                TextInput:
+                    id:url
+                    hint_text: "insert link here"
+                    size_hint:0.8,0.7
+                    pos_hint:{"center_x":0.5,"center_y":0.5}
+            RelativeLayout:
+                Button:
+                    text:"Scrape"
+                    on_press: root.property_link(root.ids.url.text)
+                    size_hint: 0.3, 0.5
+                    pos_hint:{"center_x":0.5, "center_y":0.7}
+        GridLayout:
+            cols:1
+            ScrollView:
+                Label:
+                    id:listings
+                    text:""
+                    text_size:self.width,None
+                    size_hint_y: None
+                    height:self.texture_size[1]
+
+
+<RootWidget>:
+    MainScreen:
+        name:"main_screen"

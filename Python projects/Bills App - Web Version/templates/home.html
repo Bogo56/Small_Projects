@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static_original',filename= 'main.css') }}">
+    <title>Flatmates Bill App</title>
+</head>
+<body>
+<div class=home>
+    <h1>Flatmate Bills App</h1>
+        <p>This is an App that is designed to help you with keeping your bills nice and organized. Just enter the days in month you have spent at the rented property and the total amount of the bills you and your flatmate have to pay. The App will calculate how much each one has to Pay </p>
+        <div class="links">
+            <a href="{{url_for('billsapp')}}">To the App</a>    
+        </div>
+</div>
+</body>
+</html>

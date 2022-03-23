@@ -1,0 +1,28 @@
+{% extends "template.html"%}
+
+{%block body %}
+<p class="h1 text-center mb-5">YOUR ITEMS  {{current_user.username}}</p>
+{% for item in user_items %}
+
+<div class="row align-items-start">
+  <div class="col">
+  <img src="{{ item['item_image'] }}" class="rounded float-start">
+  </div>
+  <div class="col align-self-center">
+      <div class="row align-items-start">
+        <h2>ORIGINAL PRICE: {{item["price"]}} BGN </h2>
+      </div>
+      <div class="row align-items-start mb-10">
+        <h2>NEW PRICE: {{ item["new_price"][0] }} BGN </h2>
+        {{ item["new_price"][1] | safe}}
+      </div>
+      <div class="row align-items-end mb-3 mr-5">
+        <a class="btn btn-outline-info mt-5" href="{{ item['url'] }}"  target="_blank" role="button" rel="noopener noreferrer">Go to Item</a>
+      </div>
+  </div>
+</div>
+</div>
+<hr>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static_original',filename= 'main.css') }}">
+    <title>Bills Amount</title>
+</head>
+<body>
+    <h1 class="res">Bills to be paid</h1>
+        <h3>{{amount + " BGN"}}</h3>
+    <h2 class="res">Bill Period</h2>
+        <h3>{{period}}</h3>
+    <div class="bills">
+        <table>
+            <tr>
+                <th>Flatmate Name</th>
+                <th>Days Spend</th>
+                <th> Bill Amount</th>
+            </tr>
+        {% for flatmate in res %}
+            <tr>
+                <td>{{flatmate}}</td>
+                <td>{{res[flatmate]["days"]}}</td>
+                <td>{{res[flatmate]["bils"]}}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+    <div class="download">
+        <form action="{{url_for('download')}}" method="post">
+            <button type="submit">Download as PDF</a>
+        </form>
+    </div>
+</body>
+</html>

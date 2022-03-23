@@ -1,0 +1,46 @@
+body{
+    background-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgba(248, 248, 255, 0.877);
+    text-align: center;
+}
+
+form > input {
+    width:70%;
+    height:25px;
+    margin:10px;
+}
+
+.radio input{
+    width:6%;
+}
+
+button{
+  background-color: red;
+  box-shadow: 0 5px 0 darkred;
+  color: white;
+  padding: 1em 1.5em;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width:50%;
+}
+
+button :hover{background-color: #ce0606;}
+
+button:active{box-shadow: none; top: 5px;}
+
+
+.message span{
+    background-color: rgba(74, 184, 221, 0.4);
+    margin-bottom: 20px;
+}
+
+.result span{
+    background-color: #d3161636;
+}
+
+.result{
+    margin-top:50px;
+    margin-bottom: 60px;
+}

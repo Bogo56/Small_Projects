@@ -1,0 +1,160 @@
+<LoginScreen>:
+    GridLayout:
+        cols:1
+        GridLayout:
+            cols:1
+            padding: 15,15
+            spacing: 20,20
+            Label:
+                text:"User Login"
+            TextInput:
+                id: u_log
+                hint_text:"Username"
+            TextInput:
+                id: p_log
+                hint_text:"Password"
+            ## So we can manipulate the button to be centered
+            RelativeLayout:
+                Button:
+                    text:"Login"
+                    on_press: root.login(root.ids.u_log.text,root.ids.p_log.text)
+                    size_hint: 0.3,0.5
+                    pos_hint: {"center_x":0.5, "center_y": 0.6}
+        GridLayout:
+            cols:2
+            size_hint: 0.2,0.2
+            padding: 10
+            spacing:10,0
+            Button:
+                text:"Forgot Password?"
+                ## RGB=1,1,1 and 0 is the transparancy
+                background_color: 1,1,1,0
+                ## normal means when not being clicked
+                opacity: 1 if self.state=="normal" else 0.5
+                color: 0.1,0.7,1,1
+
+                
+                
+            # root is refrencing to the kivy class - <LoginScreen>, which then acts like self in the python class
+            # and uses the function defined in it
+            Button:
+                text:"Sign Up"
+                on_press: root.sign_up()
+                background_color: 1,1,1,0
+                opacity: 1 if self.state=="normal" else 0.5
+                color: 0.1,0.7,1,1
+    
+
+<SignUpScreen>:
+    GridLayout:
+        cols:1
+        padding:[25]
+        spacing:[10]
+        RelativeLayout:
+            Button:
+                text: "Login"
+                on_press: root.home()
+                size_hint: 0.3,0.4
+                pos_hint:{"center_x":0.88,"center_y":0.77}
+        Label:
+            text:"Welcome Human"
+        ##  ID is USED IN WIDGETS SO THEY CAN BE REFRENCED AFTER THAT
+        TextInput:
+            id: user
+            hint_text:"User"
+        TextInput:
+            id: password
+            hint_text: "Password"
+            password_mask:"*"
+            password: True
+        RelativeLayout:
+            Button:
+                text:"Launch"
+        ## HERE WE PASS ARGUMENTS FRON THE TextInput WIDGETS (VIA ID) INTO THE FUNCTION
+        ## WE PUT .text TO ACCESS THE TEXT ATTRIBUTE OF TextInput WIDGET
+                on_press: root.add_user(root.ids.user.text, root.ids.password.text)
+                size_hint: 0.3, 0.5
+                pos_hint:{"center_x":0.5,"center_y":0.5}
+            
+
+            
+<SignUpScreenSuccess>:
+    GridLayout:
+        cols:1
+        padding: 30,30
+        spacing: 30,30
+        Label:
+            text:"Success"
+        RelativeLayout:
+            Button:
+                text:"Login Screen"
+                on_press:root.home()
+                size_hint: 0.3, 0.4
+                pos_hint:{"center_x":0.5,"center_y":0.5}
+
+<LogedScreen>:
+    GridLayout:
+        cols:1
+        padding: 10
+        spacing: 10
+        RelativeLayout:
+            Button:
+                text:"Logout"
+                on_press: root.log_out()
+                size_hint: 0.2,0.5
+                pos_hint:{"center_x":0.88,"center_y":0.57}
+                background_color:1,1,1,0
+                opacity: 1 if self.state=="normal" else 0.4
+                color: 0.1,0.7,1,1
+        RelativeLayout:
+            Label:
+                text:"How do you feel?"
+                pos_hint:{"center_x":0.5,"center_y":0.5}
+        TextInput:
+            id: feel
+            hint_text: "You can use : happy,sad, etc."
+        Button:
+            text:"Inspire Me"
+            on_press: root.show_quote(root.ids.feel.text)
+        ScrollView:
+            Label:
+                id:quotes
+                text: ""
+                ##TAKES THE PARAMETERS OF THE CURRENT WIDGET(Label) TROUGH SELF
+                text_size: self.width, None
+                size_hint_y:None
+                height: self.texture_size[1]
+
+    
+
+<PopUp>:
+    size_hint: 0.5,0.5
+    auto_dismiss:False
+    title:"Wrong Credentials"
+    FloatLayout:
+        Label:
+            text:"Incorrect credentials - Try again!"
+    ## POSITION IS DETERMINED ACCORDING TO THE LAYOUT
+            pos_hint: {'center_x': .5, 'center_y': .6}
+        Button:
+            text:"Close"
+            on_press:root.dismiss()
+            size:150,50
+            size_hint: None,None
+            pos_hint: {'center_x': .5, 'center_y': .2}
+
+
+    
+
+
+
+<RootWidget>:
+#SCREENS MUST HAVE A NAME, SO WE CAN REFRENCE TO THEM IN THE PYTHON FILE
+    LoginScreen:
+        name:"login_screen"
+    SignUpScreen:
+        name:"sign_up_screen"
+    SignUpScreenSuccess:
+        name:"sign_up_success"
+    LogedScreen:
+        name:"loged_screen"

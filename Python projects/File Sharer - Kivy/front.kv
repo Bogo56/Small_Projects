@@ -1,0 +1,90 @@
+<CameraScreen>:
+    GridLayout:
+        cols:1
+        padding:20
+        spacing:5
+        Camera:
+            id:camera
+            resolution:(640,480)
+            size:(500,600)
+            play: False
+            size_hint_y:0.7
+            opacity:0
+        ToggleButton:
+            text:"Start"
+            id:toggler
+            on_state:root.turn_on()
+            size_hint_y:0.15
+            background_normal:"images/normal.png"
+            background_down:"images/down.png"
+            color:"black"
+        Button:
+            text:"Capture"
+            size_hint_y:0.15
+            color:"black"
+            background_normal:"images/normal.png"
+            background_down:"images/down.png"
+            on_press:root.capture()
+            
+            
+        
+            
+
+<ImageScreen>:
+    GridLayout:
+        cols:1
+        GridLayout:
+            padding:20
+            spacing:10
+            cols:1
+            size_hint_y:0.75
+            Image:
+                source:"Kivy_Snap.png"
+                size:(500,600)
+                size_hint_y:0.84
+            Button:
+                text:"Create Link"
+                color:"black"
+                size_hint_y:0.14
+                background_normal:"images/normal.png"
+                background_down:"images/down.png"
+                on_press:root.ids.link.text=root.create_link()
+            Label:
+                id:link
+                text:""
+                size_hint_y: 0.02
+        GridLayout:
+            cols:2
+            padding:50
+            size_hint_y:0.25
+            Button:
+                text:"Copy"
+                color:"black"
+                background_normal:"images/normal.png"
+                background_down:"images/down.png"
+                on_press: root.copy()
+            Button:
+                text:"Open"
+                color:"black"
+                background_normal:"images/normal.png"
+                background_down:"images/down.png"
+                on_press:root.open()
+                
+
+<ScreenManager>:
+    CameraScreen:
+        name:"camera_screen"
+    ImageScreen:
+        name:"image_screen"
+
+
+
+### TO CHANGE WINDOW COLOR YOU CAN TYPE THIS RIGHT UNDER <ScreenManager> ### 
+
+# canvas.before:
+    # Color:
+    #   rgba:(0.3,0.2,0.1,1)
+    # Rectangle:
+    #   pos:self.pos
+    #   size:self.size
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="../static/main.css">
+    </head>
+    <body>
+        <h1>Calories Calculation Form</h1>
+        <div class="description">
+            <p>Fill in the form and click the button to know how many calories you need!</p><br>
+            <p>Let's get some info about you first.</p>
+        </div>
+        <form action="/" method="POST">
+            <label>Weight(KG)</label><br>
+            <input type="number" name="weight" required><br>
+            <label>Height(CM)</label><br>
+            <input type="number" name="height" required><br>
+            <label>Age</label><br>
+            <input type="number" name="age" required><br>
+            <label>Gender</label><br><br>
+            <div class="radio">
+                <input type="radio" id="man" name="gender" value="man" required>
+                <label for="man">Man</label>
+                <input type="radio" id="woman" name="gender" value="woman">
+                <label for="woman">Woman</label><hr>
+            </div>
+            <div class="description">
+                <p>The weather is important too!</p><br>
+                <p>Tell us where you are, so that we can include todays temperature in the calculations</p>
+            </div><br>
+            <div class="message">
+            {% if message%}
+            <h3><span>{{message | safe}}</span></h3>
+            {% endif %}
+            </div>
+            <label>City</label><br>
+            <input type="text" name="city" required><br>
+            <label>Country</label><br>
+            <input type="text" name="country" required><br><br>
+            <div class="radio">
+                <label>Activity</label><br><br>
+                <input type="radio" id="light" name="activity" value="1.2" required>
+                <label for="light">Light</label>
+                <input type="radio" id="medium" name="activity" value="1.5">
+                <label for="medium">Medium</label>
+                <input type="radio" id="high" name="activity" value="1.7">
+                <label for="high">High</label><br><br><br>
+                <button type="submit">Calculate</button>
+            </div>
+        </form>
+        <div class="result">
+            {% if calories%}
+            <h2><span>You need {{calories | safe}} calories</span></h2>
+            {% endif %}
+        </div>
+    </body>
+</html>
