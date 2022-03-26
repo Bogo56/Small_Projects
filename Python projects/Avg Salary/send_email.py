@@ -3,7 +3,7 @@ import smtplib
 
 def send_email(email,salary,avg_salary,respondents):
     from_email="actioncoachbot@gmail.com"
-    password="xyvyxlthiwjtsaab"
+    password=""
     to_email=email
 
     subject="Salary Survey"

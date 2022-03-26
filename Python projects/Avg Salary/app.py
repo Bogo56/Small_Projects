@@ -6,8 +6,7 @@ from sqlalchemy.sql import func
 app=Flask(__name__)
 ##This is to connect to a local database
 #app.config["SQLALCHEMY_DATABASE_URI"]="postgresql://postgres:database_maistor345!@localhost/salary_survey"
-app.config["SQLALCHEMY_DATABASE_URI"]="postgresql://dewmguovjpqqhq:674d08c0c3d1f9b56fa573c6c07fccf6f849cca79ca6e5220e95e25a9b222a53@ec2-23-21-229-200.compute-1.amazonaws.com:5432/d5kauec7snpuqg?sslmode=require"
-db=SQLAlchemy(app)
+app.config["SQLALCHEMY_DATABASE_URI"]=""
 
 
 #Here we just define this class so that we can call it from the console and create table with columns in the DB
