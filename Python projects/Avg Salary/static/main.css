@@ -1,0 +1,51 @@
+html, body {
+    height:100%;
+    width:100%;
+    background-color: #006666;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-color: #006666;
+    color: #e6ffff;
+    overflow:hidden;
+    text-align:center;
+}
+
+.container h1 {
+    font-family:Aerial,sans-serif;
+    margin-top: 20px;
+    color:rgb(247, 224, 191);
+    
+}
+
+.container h3{
+    font-family:Arial,sans-serif;
+    margin-top:10px;
+}
+
+form > input{
+    height:35px;
+    width:350px;
+    margin:2px;
+    padding:20px;
+    font-size: 15px;
+    text-indent: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.container button{
+    width:100px;
+    height:35px;
+    background-color: rgb(157, 188, 245);
+    border-color:darksalmon;
+    margin:3px;
+    
+}
+
+.pop-up{
+    margin:10px;
+    transition: all 0.6s ease-in-out;
+}

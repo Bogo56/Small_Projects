@@ -7,9 +7,9 @@ class MailGunException(Exception):
         super().__init__(message)
 
 class MailGun():
-    mailgun_url = "https://api.mailgun.net/v3/sandboxd4bf5d92716f41cd7ecf98.mailgun.org/messages"
+    mailgun_url = "https://api.mailgun.net/v3/sandboxd4b4645654f5d92716f41cd7ecf98.mailgun.org/messages"
     mailgun_key = ""
-    from_mail = "Excited User <mailgun@sandboxd4bf5d92716f41c68e9ae8824d7ecf98.mailgun.org>"
+    from_mail = "Excited User <mailgun@sandboxd4bf5d92716f41c68e9ae8824dsfsfsf03gkl86f7ecf98.mailgun.org>"
     mail_body = "Click this link to activate mail: {}"
     mail_subject = 'Email confirmation'
 

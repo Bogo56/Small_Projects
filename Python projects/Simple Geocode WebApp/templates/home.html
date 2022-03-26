@@ -1,0 +1,16 @@
+<!DOCTYPE "html">
+<html lang="en">
+    <title>Super Geocoder</title>
+    <head>
+        <link rel="stylesheet" href="../static/style.css">
+    </head>
+    <body>
+        <h1>Super Geocoder</h1>
+            <p>Please upload your CSV file. The values containing adresses should be in a column named address ot Address</p>
+            <h2 class="warning">{{warning|safe}}</h2>
+            <form action="{{url_for('download')}}" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file-upload" accept=".csv" required><br>
+                <button type="submit">Upload</button>
+            </form>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+body {
+    background-color: rgba(0, 102, 102, 0.521);
+    text-align: center;
+    margin-top: 70px;
+}
+
+h1 {
+    color: rgb(223, 215, 193);
+    font-size:  50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
+}
+
+p{
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+button{
+    margin-top:30px;
+    width:150px;
+    height:30px;
+    background-color:darksalmon;
+    border-style:groove;
+}
+
+
+.table{
+    margin-left: 380px;
+}
+
+.maps{
+    width:800px;
+    height:800px;
+    margin-top:80px;
+    margin-left:340px;
+}
+
+.btn{
+    margin-top:40px;
+    height:50px;
+    width: 200px;
+}

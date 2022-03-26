@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Median Salary Survey</title>
+    <head>
+        <link rel="stylesheet" href="../static/main.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Enter your Salary in the form below</h1>
+            <h3>We need your mail, so we can send you back the information</h3>
+            <div class="pop-up">
+                {{text|safe}}
+            </div>
+            <form action="{{url_for('thank_you')}}" method="POST">
+                <input title="Your email is being kept safe with us" placeholder="Your email" type="email" name="email_name" required><br>
+                <input title="We won't disclose this info to anyone" placeholder="Your salary" type="number" min="100" max="100000" name="salary_name" required><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+    
+</html>
